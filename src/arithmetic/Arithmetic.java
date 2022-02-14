@@ -31,6 +31,7 @@ public class Arithmetic
         double result = r.calculate(m,n);
         System.out.println("result :" +result); 
     
+        
     }
 }
 
