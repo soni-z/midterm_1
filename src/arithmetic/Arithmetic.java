@@ -29,13 +29,25 @@ public class Arithmetic
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter arithmetic operation to Perform: ");
         String s= sc.next();
-
+        switch (s.toUpperCase()) 
+        {
+            case "PLUS":
+                return x + y;
+           case "MINUS":
+                return x - y;
+            case "TIMES":
+                return x * y;
+            case "DIVIDE":
+                return x / y;
+            default:
+                throw new AssertionError("Unknown operations " + this);
+        }
+    
         Scanner in= new Scanner(System.in);
         int n= in.nextInt();
         int m= in.nextInt();
         double result = r.calculate(m,n);
         System.out.println("result :" +result); 
     
-    }
 }
 
