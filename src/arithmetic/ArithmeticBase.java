@@ -12,32 +12,67 @@ import java.util.Scanner;
  * change the code to use enum instead String and mention the advantage of enum.
  * @author sivagamasrinivasan
  * date 14/02/22
+ * @modifier zeel soni
  */
 public class ArithmeticBase 
 {
+
     public enum X{PLUS,MINUS,TIMES,DIVIDE};
     public enum Y{PLUS,MINUS,TIMES,DIVIDE};
  private X x;
   private Y y;
- 
-    double calculate(double x, double y) 
-        {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("Enter arithmetic operation to Perform: ");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
-        {
-            case "PLUS":
-                return x + y;
-            case "MINUS":
-                return x - y;
-            case "TIMES":
-                return x * y;
-            case "DIVIDE":
-                return x / y;
-            default:
-                throw new AssertionError("Unknown operations " + this);
-        }
+
+
+ public ArithmeticBase(X x,Y y){
+        X X = x;
+        Y Y = y;
+ }
+//    double calculate(double x, double y) 
+//        {
+//        Scanner sc =new Scanner(System.in);
+//        System.out.println("Enter arithmetic operation to Perform: ");
+//        String s= sc.next();
+//        switch (s.toUpperCase()) 
+//        {
+//            case "PLUS":
+//                return x + y;
+//            case "MINUS":
+//                return x - y;
+//            case "TIMES":
+//                return x * y;
+//            case "DIVIDE":
+//                return x / y;
+//            default:
+//                throw new AssertionError("Unknown operations " + this);
+//        }
+//    }
+
+    /**
+     * @return the x
+     */
+    public X getX() {
+        return x;
+    }
+
+    /**
+     * @param x the x to set
+     */
+    public void setX(X x) {
+        this.x = x;
+    }
+
+    /**
+     * @return the y
+     */
+    public Y getY() {
+        return y;
+    }
+
+    /**
+     * @param y the y to set
+     */
+    public void setY(Y y) {
+        this.y = y;
     }
    
 }
